@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>244bet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            color: #00ff99;
+        }
+        .qr-code {
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #00ff99;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .pix-key {
+            margin-top: 15px;
+            font-size: 18px;
+            word-break: break-all;
+            padding: 0 20px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>244bet</h1>
+    <p>Faça seu pagamento via Pix para continuar</p>
+    <div class="qr-code">
+        <img src="qr-code.jpg" alt="QR Code Pix" width="250">
+    </div>
+    <div class="pix-key" id="pixKey">
+        00020126360014BR.GOV.BCB.PIX0114+55219795050685204000053039865802BR5925Artthur Nascimento Ribeir6009SAO PAULO62140510VoXgyIS2DD63046E61
+    </div>
+    <button onclick="copyPixKey()">Copiar Chave Pix</button>
+    <div class="footer">Instituição: pagment</div>
+
+    <script>
+        function copyPixKey() {
+            const key = document.getElementById("pixKey").innerText;
+            navigator.clipboard.writeText(key).then(() => {
+                alert("Chave Pix copiada!");
+            });
+        }
+    </script>
+</body>
+</html>
